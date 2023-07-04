@@ -1,0 +1,133 @@
+import random
+
+print("HELLO THERE \n Ready to start the quiz? \n 3 \n 2 \n 1 "
+      "\n GO\n ")
+print("Task 1\n")
+name = str(input("Enter your name: "))
+num = int(input("Enter the choice of multiplication table (2-12): "))
+if 2 <= num <= 12:
+    count = 0
+    for i in range(1,6):
+        n = random.randint(2,12)
+        cns = num*n
+        ans = int(input(f"Question {i}: {num} * {n} = "))
+        if ans == cns:
+                count += 1
+    if count == 5:
+        print(f"{name} your score is 5/5.\n Well done, full marks!")
+    elif count == 4:
+        print(f"{name} your score is 4/5.\n Almost there!")
+    elif count == 3:
+        print(f"{name} your score is 3/5.\n Have another practice")
+    elif count == 2:
+        print(f"{name} your score is 2/5.\n Could have done better!")
+    elif count == 1:
+        print(f"{name} your score is 1/5.\n Revise multiplication tables again!")
+    else:
+        print(f"{name}, you got 0. Either you are a newborn kid, or else u are stoopid.\n"
+              "In my days, we used to learn trigonometry and logarithms at the age of 5.\n"
+              "As for multiplication, we were born with the tables in our minds.")
+else:
+    print("INCORRECT NUMBER; CHOOSE NUMBER FROM GIVEN RANGE")
+
+
+
+print('\n'
+      '\n'
+      '\n'
+      'Task 2'
+      '\n')
+
+name2 = str(input("Enter your name: "))
+num2 = int(input("Enter the choice of multiplication table (2-12): "))
+if 2 <= num2 <= 12:
+    count2 = 0
+    for j in range(1,6):
+        n2 = random.randint(2,12)
+        cns2 = num2*n2
+        ans2 = int(input(f"Question {j}: {num2} * {n2} = "))
+        if ans2 == cns2:
+            count2 += 1
+            print(f"{name2}, your answer is correct.")
+        else:
+            guess = 1
+            if ans2 > cns2:
+                print(f"{name2}, your answer is too large.")
+            else:
+                print(f"{name2}, your answer is too small.")
+            while ans2 != cns2 and guess != 3:
+                ans2 = int(input(f"Question {j}: {num2} * {n2} = "))
+                if ans2 > cns2:
+                    print(f"{name2}, your answer is too large.")
+                    guess += 1
+                elif ans2 < cns2:
+                    print(f"{name2}, your answer is too small.")
+                    guess += 1
+                else:
+                    print(f"{name2}, your answer is correct.")
+                    count2 += 1
+
+
+    if count2 == 5:
+        print(f"{name2} your score is 5/5.\n Well done, full marks!")
+    elif count2 == 4:
+       print(f"{name2} your score is 4/5.\n Almost there!")
+    elif count2 == 3:
+       print(f"{name2} your score is 3/5.\n Have another practice")
+    elif count2 == 2:
+       print(f"{name2} your score is 2/5.\n Could have done better!")
+    elif count2 == 1:
+       print(f"{name2} your score is 1/5.\n Revise multiplication tables again!")
+    else:
+       print(f"{name2}, you got 0. Either you are a newborn kid, or else u are stoopid.\n"
+             "In my days, we used to learn trigonometry and logarithms at the age of 5.\n"
+             "As for multiplication, we were born with the tables in our minds.")
+
+print("\n"
+      "\n"
+      "\n"
+      "Task 3"
+      "\n")
+
+name3 = str(input("Enter your name: "))
+qno = int(input("How many questions do you want?: "))
+mixed = str(input("Do you want a mixed set of questions?: "))
+mixed = mixed.lower()
+if mixed == "yes" or mixed == "y":
+    count3 = 0
+    for k in range(1, qno+1):
+        n3 = random.randint(2, 12)
+        mn = random.randint(1,12)
+        cns3 = mn * n3
+        ans3 = int(input(f"Question {k}: {mn} * {n3} = "))
+        if ans3 == cns3:
+            count3 += 1
+    if count3 == qno:
+        print(f"{name3} your score is {count3}.\n Well done, full marks!")
+    elif count3 == 0:
+        print(f"{name3}, you got 0. Either you are a newborn kid, or else u are stoopid.\n"
+              "In my days, we used to learn trigonometry and logarithms at the age of 5.\n"
+              "As for multiplication, we were born with the tables in our minds.")
+    else:
+        print(f"{name3}, your score is {count3}")
+else:
+    nombre = int(input("Enter your choice of multiplication table (2-12): "))
+    count4 = 0
+    for k in range(1, qno + 1):
+        n4 = random.randint(2, 12)
+        cns3 = nombre * n4
+        ans3 = int(input(f"Question {k}: {nombre} * {n4} = "))
+        if ans3 == cns3:
+            count4 += 1
+    if count4 == qno:
+        print(f"{name3} your score is {count4}.\n Well done, full marks!")
+    elif count4 == 0:
+        print(f"{name3}, you got 0. Either you are a newborn kid, or else u are stoopid.\n"
+              "In my days, we used to learn trigonometry and logarithms at the age of 5.\n"
+              "As for multiplication, we were born with the tables in our minds.")
+    else:
+        print(f"{name3}, your score is {count4}")
+
+
+
+
